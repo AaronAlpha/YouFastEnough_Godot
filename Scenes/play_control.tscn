@@ -1,0 +1,256 @@
+[gd_scene load_steps=21 format=3 uid="uid://in0agy6ml4lu"]
+
+[ext_resource type="FontFile" uid="uid://bukh8cs171x62" path="res://Assets/Font Style/TechnoRaceItalic-eZRWe.otf" id="1_b6isw"]
+[ext_resource type="Script" uid="uid://jtea5waibsr6" path="res://Scripts/play_control.gd" id="1_iungp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iungp"]
+bg_color = Color(0.941176, 0, 0.352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrrem"]
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eprb"]
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myu07"]
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iungp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcewt"]
+bg_color = Color(0.176471, 0.72549, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpnk3"]
+bg_color = Color(0, 0.72549, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb545"]
+bg_color = Color(0.92549, 0.705882, 0.701961, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcewt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eq26n"]
+bg_color = Color(0.176471, 0.72549, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cidl7"]
+bg_color = Color(0, 0.72549, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q2vp"]
+bg_color = Color(0.74902, 0.745098, 0.941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khq7s"]
+bg_color = Color(0.556863, 0.85098, 0.588235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6isw"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rpnk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j23qa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djxsi"]
+bg_color = Color(0.760784, 0.760784, 0.760784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhd34"]
+bg_color = Color(0.537255, 0.811765, 0.941176, 1)
+
+[node name="PlayChoose_Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iungp")
+
+[node name="PlayChoose_Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iungp")
+
+[node name="ChoosingGameModeDesign_Node" type="Control" parent="."]
+anchors_preset = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="DungeonSlayers_Panel" type="Panel" parent="ChoosingGameModeDesign_Node"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 179.0
+offset_right = 370.0
+offset_bottom = 542.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrrem")
+
+[node name="DS_Label" type="Label" parent="ChoosingGameModeDesign_Node"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 281.0
+offset_right = 342.0
+offset_bottom = 502.0
+text = "test"
+
+[node name="VanillaSpeedrunners_Panel" type="Panel" parent="ChoosingGameModeDesign_Node"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 179.0
+offset_right = 759.0
+offset_bottom = 542.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4eprb")
+
+[node name="VS_Label" type="Label" parent="ChoosingGameModeDesign_Node"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 281.0
+offset_right = 728.0
+offset_bottom = 502.0
+text = "tes"
+
+[node name="SequencesSpeedrunners_Panel" type="Panel" parent="ChoosingGameModeDesign_Node"]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 179.0
+offset_right = 1141.0
+offset_bottom = 542.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_myu07")
+
+[node name="SS_Label" type="Label" parent="ChoosingGameModeDesign_Node"]
+layout_mode = 0
+offset_left = 803.0
+offset_top = 281.0
+offset_right = 1112.0
+offset_bottom = 502.0
+text = "text
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 62.0
+offset_top = 214.0
+offset_right = 1079.0
+offset_bottom = 265.0
+theme_override_constants/separation = 135
+
+[node name="Easy_Button" type="Button" parent="HBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_b6isw")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iungp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bcewt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rpnk3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eb545")
+text = "Dungeon Slayers
+"
+
+[node name="Medium_Button" type="Button" parent="HBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_b6isw")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bcewt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eq26n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cidl7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1q2vp")
+text = "Vanilla Speedrunners"
+
+[node name="Hard_Button" type="Button" parent="HBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_b6isw")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bcewt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eq26n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cidl7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_khq7s")
+text = "Sequences Speedrunners"
+
+[node name="Color_Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6isw")
+
+[node name="PlayTitle_Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.282353, 0.266667, 0.705882, 1)
+theme_override_fonts/font = ExtResource("1_b6isw")
+theme_override_font_sizes/font_size = 97
+text = "Can you survive the worst?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 560.0
+offset_right = 326.0
+offset_bottom = 632.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_b6isw")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rpnk3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j23qa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_djxsi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vhd34")
+text = "Back (Menu)"
+
+[connection signal="pressed" from="HBoxContainer/Easy_Button" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Medium_Button" to="." method="_on_medium_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Hard_Button" to="." method="_on_hard_button_pressed"]
+[connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
