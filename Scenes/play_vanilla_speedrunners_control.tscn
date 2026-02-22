@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4dtfrbgbx68n"]
+
+[ext_resource type="PackedScene" uid="uid://j1hp1exi4qyh" path="res://Scenes/reusablePlayScenes_PlayVanillaANDSequencesSpeedrunners.tscn" id="1_thyo3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4sxtf"]
+bg_color = Color(0.74902, 0.745098, 0.941176, 1)
+
+[node name="PlayVanillaSpeedrunners_Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayVanillaSpeedrunners_Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4sxtf")
+
+[node name="ReusablePlayScenes_Control" parent="." instance=ExtResource("1_thyo3")]
+layout_mode = 1

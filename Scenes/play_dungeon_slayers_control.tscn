@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci6i31p20ievp"]
+
+[ext_resource type="PackedScene" uid="uid://dahnablng4qfh" path="res://Scenes/reusablePlayScenes_PlayDungeonSlayers.tscn" id="1_1ko5b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu8t6"]
+bg_color = Color(0.92549, 0.705882, 0.701961, 1)
+
+[node name="PlayDungeonSlayers_Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayDungeonSlayers_Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tu8t6")
+
+[node name="ResuablePlayScene_Control" parent="." instance=ExtResource("1_1ko5b")]
+layout_mode = 1
+
+[node name="Timer" type="Timer" parent="ResuablePlayScene_Control"]
+wait_time = 15.0
+one_shot = true
+
+[node name="SD_Timer" type="Timer" parent="ResuablePlayScene_Control"]
+wait_time = 0.1
+
+[connection signal="timeout" from="ResuablePlayScene_Control/Timer" to="ResuablePlayScene_Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="ResuablePlayScene_Control/SD_Timer" to="ResuablePlayScene_Control" method="_on_sd_timer_timeout"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt78tstvkd30x"]
+
+[ext_resource type="PackedScene" uid="uid://j1hp1exi4qyh" path="res://Scenes/reusablePlayScenes_PlayVanillaANDSequencesSpeedrunners.tscn" id="1_jhkm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vaq6a"]
+bg_color = Color(0.556863, 0.85098, 0.588235, 1)
+
+[node name="PlaySequencesSpeedrunners_Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlaySequencesSpeedrunners_Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vaq6a")
+
+[node name="ReusablePlayScene_Control" parent="." instance=ExtResource("1_jhkm6")]
+layout_mode = 1
+
+[node name="Cheat_TestButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 584.0
+offset_right = 154.0
+offset_bottom = 633.0
+text = "Cheat"
+
+[connection signal="pressed" from="Cheat_TestButton" to="ReusablePlayScene_Control" method="_on_cheat_test_button_pressed"]
